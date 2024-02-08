@@ -2,194 +2,217 @@
     box-sizing: border-box;
 }
 
-h2,
-h3 {
-    color: #7a6449;
+h1,
+h2 {
+    color: #FF8080;
     font-weight: 900;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+h3 {
+    color: #F6FDC3;
+}
+
+p {
+    margin-bottom: 5px;
+    padding: 5px;
+    color: #FF8080;
+    border-radius: 5px;
+
 }
 
 body {
+    font-family: 'Roboto Mono', monospace;
     margin: 0;
     padding: 0;
-}
-
-.jumbotron {
-    font-size: 20px;
-    background: url('jumbotron.jpg') center/cover no-repeat;
-    text-align: left;
-    color: white;
-    padding: 80px;
 }
 
 header {
     position: relative;
     text-align: center;
     animation: fadeInDown 1s ease-in-out;
-}
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .logo-container img {
     width: 200px;
-    height: auto;
-    margin-right: 10px;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 20px;
-}
-
-nav li {
     list-style-type: none;
-}
-
-nav {
-    background-color: #ffe4c4;
-}
-
-main {
+    background-color: #CDFADB;
+    display: flex;
+    justify-content: left;
+    gap: 1rem;
     padding: 20px;
-    display: flex;
-    gap: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 90px;
 }
 
-.left-content {
-    text-align: left;
-    width: 70%;
-    height: 100%;
-    flex: 5;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 1rem 2rem;
-    float: left;
+nav ul li {
+    display: inline;
 }
 
 nav a {
     text-decoration: none;
     padding: 10px;
-    color: #4d3434;
+    color: #FF8080;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 nav a:hover {
     font-weight: bold;
+    background-color: #e0ab68;
+    color: #fff;
+}
+
+main {
+    padding: 1rem;
+}
+
+.jumbotron {
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 2rem;
+    padding: 100px;
+    background: url('jumbotron.jpg');
+}
+
+#content {
+    width: 69%;
+    height: 100%;
+    float: left;
+
+}
+
+.card {
+    background-color: #CDFADB;
+    padding: 2rem;
+    margin: 10px;
+    margin-left: 2px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+
 }
 
 .featured-image {
     width: 100%;
-    max-height: 300px;
+    border-radius: 5px;
+    margin-bottom: 4px;
+    max-height: 500px;
     object-fit: cover;
     object-position: center;
 }
 
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 50px;
-}
-
-section {
-    margin-top: 40px;
-}
-
-footer {
-    padding: 20px;
-    color: #6f4e37;
-    background-color: #e0c2a2;
-    text-align: center;
-    font-weight: bold;
-    clear: both;
-}
-
-footer p {
-    margin: 0;
-}
-
 aside {
-    flex: 1;
+    color: #FF8080;
+    display: flex;
+    width: 20%;
+
+}
+
+.profile {
+    background-color: #F6FDC3;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    flex-direction: column;
 }
 
 .profile img {
     max-width: 200px;
 }
 
-.profile header {
+footer {
+    background-color: #CDFADB;
+    color: #FF8080;
     text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    clear: both;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 90px;
 }
 
-.profile {
-    width: 29%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+table {
+    width: 100%;
+
 }
 
-#home {
-    padding: 50px;
-    background-image: url('warung 6.png');
-    background-size: cover;
-    color: #fff;
-    text-align: center;
+th,
+td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
 }
 
-#home h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+th {
+    text-align: left;
 }
-
-#home p {
-    font-size: 1.5em;
-}
-
 
 @media screen and (max-width: 1200px) {
     main {
         flex-direction: column;
         align-items: center;
     }
-    .left-content {
-        width: 100%;
-    }
-    aside {
-        width: 100%;
+
+    main aside {
+        width: 90%;
+        margin: 10px auto;
     }
 }
 
-
 @media screen and (max-width: 768px) {
-    .jumbotron {
-        padding: 50px 20px; 
-    }
-    .logo-container img {
-        width: 150px; 
-    }
     nav ul {
-        flex-direction: column; 
-        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
     }
-    main {
-        flex-direction: column; 
+
+    nav ul li {
+        margin-bottom: 10px;
     }
-    .profile {
-        width: 100%;
+
+    main aside {
+        width: 90%;
         margin-top: 20px;
     }
+
     .card {
-        padding: 20px; 
+        width: 90%;
+        margin: 10px auto;
     }
-    footer {
-        padding: 10px; 
+}
+
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    background-image: url('navigasi.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s; 
+    animation: floatAnimation 2s infinite alternate; 
+}
+
+#scroll-to-top:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
